@@ -16,7 +16,6 @@ logger.addHandler(c_handler)
 
 class PileParser:
 
-
     def __init__(self, file_path, no_workers):
         
         # Initialize the attributes for the object

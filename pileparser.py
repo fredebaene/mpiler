@@ -1,5 +1,17 @@
+import logging
 import os
 
+
+# Instantiate a custom logger
+logger = logging.getLogger(__main__)
+logger.setLevel(level=logging.DEBUG)
+
+# Instantiate a handler to log messages to stdout
+c_handler = logging.StreamHandler()
+c_handler.setLevel(level=logging.ERROR)
+c_format = logging.Formatter("%(name)s - %(levelname)s : %(message)s")
+c_handler.setFormatter(c_format)
+logger.addHandler(c_handler)
 
 class PileParser:
 
